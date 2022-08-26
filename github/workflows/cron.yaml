@@ -1,0 +1,13 @@
+name: daily-cron
+on:
+  schedule:
+    - cron: "0 1 * * *"
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update events once a day
+        run: |
+          curl --request POST \
+          --url 'https://doble-website.vercel.app/api/exibitions' \
+          --header 'Authorization: Bearer ${{ secrets.CRON_SECRET }}'

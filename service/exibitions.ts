@@ -26,9 +26,12 @@ export const updateSupabaseExibitions = async (exibitions: APIExibition[]) => {
 }
 
 export const getAllExibitions = async () => {
+  const now = new Date()
   const { data, error } = await supabase
     .from("exibitions")
     .select(`*, venues (*)`)
+    .gte("enddate", `${now.toISOString().split("T")[0]}`)
+  console.log(error)
   if (error) throw new Error("Error while getting exibitions")
 
   return data

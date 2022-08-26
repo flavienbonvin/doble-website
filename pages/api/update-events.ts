@@ -13,8 +13,8 @@ export default async function handler(
     return res.status(405).end()
   }
 
-  const { secret } = req.body
-  if (!secret || secret !== process.env.CRON_SECRET) {
+  const { authorization } = req.headers
+  if (!authorization || authorization !== `Bearer ${process.env.CRON_SECRET}`) {
     return res.status(401).end()
   }
 

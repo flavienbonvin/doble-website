@@ -13,7 +13,7 @@ export default async function handler(
   try {
     const exibitions = await getAllExibitions()
     res.setHeader("Cache-Control", "public,max-age=60")
-    res.status(200).json({ ...exibitions, date: new Date() })
+    res.status(200).json(exibitions)
   } catch (e: any) {
     return res.status(500).send(e.message ?? "Unexpected error")
   }
