@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getAllExibitions } from "../../service/exibitions"
+import { getAllExhibitions } from "../../service/exhibitions"
 
 export default async function handler(
   req: NextApiRequest,
@@ -11,9 +11,9 @@ export default async function handler(
   }
 
   try {
-    const exibitions = await getAllExibitions()
+    const exhibitions = await getAllExhibitions()
     res.setHeader("Cache-Control", "public,max-age=60")
-    res.status(200).json(exibitions)
+    res.status(200).json(exhibitions)
   } catch (e: any) {
     return res.status(500).send(e.message ?? "Unexpected error")
   }

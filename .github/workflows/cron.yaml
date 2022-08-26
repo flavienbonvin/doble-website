@@ -9,5 +9,5 @@ jobs:
       - name: Update events once a day
         run: |
           curl --request POST \
-          --url 'https://doble-website.vercel.app/api/exibitions' \
+          --url 'https://doble-website.vercel.app/api/update-events' \
           --header 'Authorization: Bearer ${{ secrets.CRON_SECRET }}'

@@ -1,9 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next"
 import {
-  getCurrentlyRunningExibitions,
-  updateSupabaseExibitions,
-} from "../../service/exibitions"
+  getCurrentlyRunningExhibitions,
+  updateSupabaseExhibitions,
+} from "../../service/exhibitions"
 
 export default async function handler(
   req: NextApiRequest,
@@ -18,10 +18,10 @@ export default async function handler(
     return res.status(401).end()
   }
 
-  const exibitions = await getCurrentlyRunningExibitions()
+  const exhibitions = await getCurrentlyRunningExhibitions()
 
   try {
-    await updateSupabaseExibitions(exibitions)
+    await updateSupabaseExhibitions(exhibitions)
   } catch (e: any) {
     return res.status(500).send(e.message ?? "Unexpected error")
   }

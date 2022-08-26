@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-export const APIExibitionParser = z.object({
+export const APIExhibitionParser = z.object({
   id: z.number(),
   begindate: z.string(),
   enddate: z.string(),
@@ -22,4 +22,4 @@ export const APIExibitionParser = z.object({
     .array(),
 })
 
-export type APIExibition = z.infer<typeof APIExibitionParser>
+export type APIExhibition = z.infer<typeof APIExhibitionParser>
