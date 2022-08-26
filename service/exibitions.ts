@@ -24,3 +24,12 @@ export const updateSupabaseExibitions = async (exibitions: APIExibition[]) => {
     if (exibitionsError) throw new Error("Error while inserting exibitions")
   })
 }
+
+export const getAllExibitions = async () => {
+  const { data, error } = await supabase
+    .from("exibitions")
+    .select(`*, venues (*)`)
+  if (error) throw new Error("Error while getting exibitions")
+
+  return data
+}
