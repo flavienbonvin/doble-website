@@ -1,5 +1,9 @@
 import { DB_TABLE_EXHIBITION, DB_TABLE_VENUE } from "../constants/db"
-import { APIExhibition, APIExhibitionParser } from "../models/ApiExhibitions"
+import {
+  APIExhibition,
+  APIExhibitionParser,
+  DBExhibition,
+} from "../models/ApiExhibitions"
 import { supabase } from "../utils/supabaseClient"
 
 export const getCurrentlyRunningExhibitions = async () => {
@@ -30,14 +34,13 @@ export const updateSupabaseExhibitions = async (
   })
 }
 
-export const getAllExhibitions = async () => {
+export const getAllExhibitions = async (): Promise<DBExhibition[]> => {
   const now = new Date()
   const { data, error } = await supabase
     .from(DB_TABLE_EXHIBITION)
     .select(`*, venues (*)`)
     .gte("enddate", `${now.toISOString().split("T")[0]}`)
-  console.log(error)
-  if (error) throw new Error("Error while getting exhibitions")
 
+  if (error) throw new Error("Error while getting exhibitions")
   return data
 }

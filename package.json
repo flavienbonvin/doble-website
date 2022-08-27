@@ -11,12 +11,14 @@
   "dependencies": {
     "@supabase/supabase-js": "2.0.0-rc.6",
     "next": "12.2.5",
+    "node-geocoder": "^4.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "zod": "^3.18.0"
   },
   "devDependencies": {
     "@types/node": "18.7.13",
+    "@types/node-geocoder": "^3.24.5",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.8",
