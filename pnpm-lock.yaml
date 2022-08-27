@@ -11,7 +11,6 @@ specifiers:
   eslint-config-next: 12.2.5
   next: 12.2.5
   node-geocoder: ^4.2.0
-  openweather-api-node: ^1.4.1
   postcss: ^8.4.16
   prettier: 2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
@@ -25,7 +24,6 @@ dependencies:
   '@supabase/supabase-js': 2.0.0-rc.6
   next: 12.2.5_biqbaboplfbrettd7655fr4n2y
   node-geocoder: 4.2.0
-  openweather-api-node: 1.4.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   zod: 3.18.0
@@ -550,14 +548,6 @@ packages:
     resolution: {integrity: sha512-32+ub6kkdhhWick/UjvEwRchgoetXqTK14INLqbGm5U2TzBkBNF3nQtLYm8ovxSkQWArjEQvftCKryjZaATu3w==}
     engines: {node: '>=4'}
     dev: true
-
-  /axios/0.21.4:
-    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
-    dependencies:
-      follow-redirects: 1.15.1
-    transitivePeerDependencies:
-      - debug
-    dev: false
 
   /axobject-query/2.2.0:
     resolution: {integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==}
@@ -1230,16 +1220,6 @@ packages:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
 
-  /follow-redirects/1.15.1:
-    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dev: false
-
   /fraction.js/4.2.0:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
@@ -1816,14 +1796,6 @@ packages:
     dependencies:
       wrappy: 1.0.2
     dev: true
-
-  /openweather-api-node/1.4.1:
-    resolution: {integrity: sha512-BIVa3YoxzLQvxNoFCqfS/OVl6RaPSCmhS3dC/GnOEy5rmo5Itttl/5aEC9UKW7yXSLVJQGuox5SqtggRhI/gyQ==}
-    dependencies:
-      axios: 0.21.4
-    transitivePeerDependencies:
-      - debug
-    dev: false
 
   /optionator/0.9.1:
     resolution: {integrity: sha512-74RlY5FCnhq4jRxVUPKDaRwrVNXMqsGsiW6AJw4XK8hmtm10wC0ypZBLw5IIp85NZMr91+qd1RvvENwg7jjRFw==}
