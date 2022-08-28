@@ -55,5 +55,5 @@ const getMeteoArray = async (geocodes: any[]) => {
   return await Promise.all(promiseMeteo)
 }
 const getMeteoUrl = (lat: number, lon: number) => {
-  return `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&exclude=current,minutely,hourly,alerts&lon=${lon}&appid=60b4b25d63fe35038b085aa864d796dc`
+  return `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&units=metric&exclude=current,minutely,hourly,alerts&lon=${lon}&appid=60b4b25d63fe35038b085aa864d796dc`
 }
