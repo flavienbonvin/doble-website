@@ -15,12 +15,12 @@ const MeteoCard = ({ index, data }: Props) => {
   return (
     <div
       className={`grid grid-cols-3 items-center px-2 ${
-        index % 2 === 0 ? "bg-gray-50" : "bg-wite"
+        index % 2 === 0 ? "bg-yellow-50/50" : "bg-wite"
       }`}>
       <p className="text-sm">{displayValue}</p>
       <div className="text-center">
         <Image
-          src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
+          src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
           alt={data.weather[0].description}
           height={48}
           width={48}
