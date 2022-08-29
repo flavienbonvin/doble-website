@@ -9,7 +9,7 @@ interface Props {
 
 const Home = ({ exhibitions }: Props) => {
   return (
-    <main className="mb-20">
+    <>
       <h1 className="mb-4 text-center font-brand text-2xl tracking-wide md:mb-8">
         Doble - Exhibitions database
       </h1>
@@ -19,7 +19,7 @@ const Home = ({ exhibitions }: Props) => {
           <ExhibitionCard exhibition={exhibition} key={exhibition.id} />
         ))}
       </div>
-    </main>
+    </>
   )
 }
 

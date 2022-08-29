@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="bg-zinc-50">
       <Nav />
-      <div className="container mx-auto px-4 md:px-0">
+      <div className="container mx-auto px-4 pb-20 md:px-0">
         <Component {...pageProps} />
       </div>
     </div>
