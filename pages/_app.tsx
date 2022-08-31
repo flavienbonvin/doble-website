@@ -6,7 +6,7 @@ import Nav from "../components/Nav"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="h-[100vh] bg-zinc-50">
+    <div className="bg-zinc-50">
       <Nav />
       <div className="container mx-auto px-4 pb-20 md:px-0">
         <Component {...pageProps} />

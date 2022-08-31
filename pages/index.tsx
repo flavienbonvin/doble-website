@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Divider from "../components/Divider"
 import ExhibitionCard from "../components/ExhibitonCard"
 import { getAllExhibitions } from "../service/exhibitions"
@@ -10,6 +11,13 @@ interface Props {
 const Home = ({ exhibitions }: Props) => {
   return (
     <>
+      <Head>
+        <title>Doble Art</title>
+        <meta
+          name="description"
+          content="Currently running exhibitions at Doble Art"
+        />
+      </Head>
       <h1 className="mb-4 text-center font-brand text-2xl tracking-wide md:mb-8">
         Doble - Exhibitions database
       </h1>
