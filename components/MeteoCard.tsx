@@ -15,7 +15,7 @@ const MeteoCard = ({ index, data }: Props) => {
   return (
     <div
       className={`grid grid-cols-3 items-center px-2 ${
-        index % 2 === 0 ? "bg-gray-50" : "bg-white"
+        index % 2 === 0 ? "bg-gray-200/75" : "bg-white"
       }`}>
       <p className="text-sm">{displayValue}</p>
       <div className="text-center">
@@ -24,6 +24,7 @@ const MeteoCard = ({ index, data }: Props) => {
           alt={data.weather[0].description}
           height={48}
           width={48}
+          className="drop-shadow-lg"
         />
       </div>
       <p className="text-end text-sm">

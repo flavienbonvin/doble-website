@@ -21,7 +21,7 @@ const Home = ({ exhibitions }: Props) => {
       <h1 className="mb-4 text-center font-brand text-2xl tracking-wide md:mb-8">
         Doble - Exhibitions database
       </h1>
-      <Divider color="border-yellow-400" />
+      <Divider color="border-yellow-500" />
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         {exhibitions.map((exhibition, index) => (
           <ExhibitionCard exhibition={exhibition} key={exhibition.id} />
